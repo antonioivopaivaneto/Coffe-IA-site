@@ -91,11 +91,11 @@ const CoffeeLandingPage = () => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       >
-        <div className="p-2 fixed bottom-0 right-0 w-28 cursor-pointer group mb-5">
+        <div className="px-7 fixed bottom-0 right-0 w-28 cursor-pointer group mb-5">
           <img
             src={cup}
             alt="Copo de Café"
-            className="transition-transform duration-300 ease-in-out"
+            className="transition-transform duration-300 ease-in-out w-16"
           />
           <p className="text-xs absolute bottom-5 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             Topo
@@ -103,8 +103,8 @@ const CoffeeLandingPage = () => {
         </div>
       </a>
 
-      {/* Vitrine de Produtos */}
-      <section id="shop" className="py-20 bg-gray-100">
+       {/* Vitrine de Produtos */}
+       <section id="shop" className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">
             Nosso Café Premium
