@@ -47,8 +47,6 @@ const CoffeeLandingPage = () => {
 
   return (
     <div className="font-sans">
-
-      
       {/* Seção de Cabeçalho */}
       <header className="relative h-screen flex items-center justify-center text-white">
         <img
@@ -56,10 +54,17 @@ const CoffeeLandingPage = () => {
           alt="Grãos de café"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+
         <div className="z-10 text-center">
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="md:text-2xl sm:text-xs font-bold mb-4 flex justify-center">
+            Café do{" "}
+            <span className="bg-white text-stone-700 mx-2 rounded-lg">
+              {" "}
+              Tech Paiva
+            </span>
+          </h1>
+          <h1 className="md:text-6xl text-5xl font-bold mb-4">
             Experimente a Pura Felicidade do Café
           </h1>
           <p className="text-xl mb-8">
@@ -67,29 +72,36 @@ const CoffeeLandingPage = () => {
           </p>
           <a
             href="#shop"
-            className="bg-yellow-600 text-white font-bold py-3 px-8 rounded-full hover:bg-yellow-700 transition duration-300"
+            onClick={(e) => {
+              e.preventDefault(); // Previne o comportamento padrão do link
+              window.scrollTo({ top: 950, behavior: "smooth" });
+            }}
+            className="bg-yellow-600 text-white font-bold py-3 px-8 rounded-full 
+             hover:bg-yellow-700 active:bg-yellow-800 transition-all duration-300 ease-in-out 
+             transform hover:scale-105"
           >
             Comprar Agora
           </a>
         </div>
       </header>
-      <a 
-  href="#" 
-  onClick={(e) => {
-    e.preventDefault(); // Previne o comportamento padrão do link
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }}
->
-  <div className="p-2 fixed bottom-0 right-0 w-28 cursor-pointer group mb-5">
-    <img src={cup} alt="Copo de Café" className="transition-transform duration-300 ease-in-out" />
-    <p className="text-xs absolute bottom-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-      Retornar ao Topo
-    </p>
-  </div>
-</a>
-
-
-
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault(); // Previne o comportamento padrão do link
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        <div className="p-2 fixed bottom-0 right-0 w-28 cursor-pointer group mb-5">
+          <img
+            src={cup}
+            alt="Copo de Café"
+            className="transition-transform duration-300 ease-in-out"
+          />
+          <p className="text-xs absolute bottom-5 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            Topo
+          </p>
+        </div>
+      </a>
 
       {/* Vitrine de Produtos */}
       <section id="shop" className="py-20 bg-gray-100">
@@ -251,8 +263,6 @@ const CoffeeLandingPage = () => {
         </div>
       </section>
 
-      
-
       {/* Rodapé com Integração de Mídias Sociais */}
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4">
@@ -281,7 +291,6 @@ const CoffeeLandingPage = () => {
           </p>
         </div>
       </footer>
-
     </div>
   );
 };
